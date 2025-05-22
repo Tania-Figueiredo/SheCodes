@@ -1,9 +1,15 @@
+/*
+=============================
+      GLOBAL STYLES
+=============================
+*/
 body {
   background: #fdfdfd;
   font-family: "Source Sans 3", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 h1,
 h2,
 h3 {
@@ -11,145 +17,128 @@ h3 {
   color: #ab94b4;
   font-size: 20px;
 }
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+/*
+=============================
+        GLOBAL STYLES
+=============================
+*/
+body {
+  background: #fdfdfd;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
 }
 
-.search-form {
-  display: flex;
-  gap: 5px;
+h1,
+h2,
+h3 {
+  color: #ab94b4;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
 }
 
-.search-form input[type="search"] {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ab94b4;
-  box-shadow: 0 4px 10px #ab94b4;
-  color: #2a2a2a;
-  background-color: #f8f5f7;
+/*
+=============================
+        DARK MODE
+=============================
+*/
+body.dark {
+  background: #1e1e1e;
+  color: #fdfdfd;
 }
 
-.search-form input[type="submit"] {
+body.dark .current-weather .weather-box,
+body.dark .forecast li {
+  background-color: #3b3b3b;
+  box-shadow: 0 4px 10px #222;
+}
+
+body.dark .dark-mode-toggle,
+body.dark .search-form input[type="submit"] {
+  background-color: #6a5a77;
+  box-shadow: 0 4px 10px #333;
+}
+
+body.dark footer,
+body.dark footer a,
+body.dark .date,
+body.dark .forecast-temperature,
+body.dark .forecast-title,
+body.dark .temperature,
+body.dark .weather-right p,
+body.dark input[type="search"],
+body.dark p,
+body.dark span {
+  color: #ab94b4;
+}
+
+body.dark .search-form input[type="search"] {
+  background-color: #2a2a2a;
+  border: 1px solid #ccc;
+  color: #fdfdfd;
+}
+
+/*
+=============================
+        DATE & TIME
+=============================
+*/
+.date {
+  color: #ab94b4;
+  display: block;
+  font-size: 16px;
+  font-weight: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+/*
+=============================
+        DARK MODE BUTTON
+=============================
+*/
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   padding: 10px 16px;
   background-color: #c5a4d4;
   color: white;
   border: none;
   border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
   box-shadow: 0 4px 10px #ab94b4;
+  z-index: 1000;
 }
-.search-form input[type="submit"]:hover {
+
+.dark-mode-toggle:hover {
   background-color: #ab94b4;
-  color: #fff;
-  transition: all 200ms ease-in-out;
 }
 
-.date {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #ab94b4;
-  padding: 5px;
-  font-weight: 10px;
-}
-
-.current-weather .weather-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e8e4ec;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px #ab94b4;
-  flex: 1;
-  text-align: center;
-}
-
-.weather-left h1 {
-  margin: 0;
-  font-size: 36px;
-  color: #ab94b4;
-}
-
-.temperature {
-  font-size: 48px;
-  margin: 5px 0 0;
-  color: #c08087;
-}
-
-.weather-center {
-  font-size: 48px;
-}
-
-.weather-right p {
-  margin: 4px 0;
-  font-size: 16px;
-  text-align: right;
-  color: #444444;
-  font-weight: 5px;
-}
-
-hr {
-  margin: 40px 0 20px;
-  color: #ab94b4;
-  opacity: 25%;
-}
-
-.forecast-title {
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: left;
-  font-size: 14px;
-  color: #ab94b4;
-}
-
-.forecast ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  gap: 30px;
-  flex: 1;
-}
-
-.forecast li {
-  flex: 1;
-  background-color: #e8e4ec;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px #ab94b4;
-  padding: 15px;
-  text-align: center;
-  font-size: 20px;
-}
-.forecast li:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
-}
-.forecast-temperature {
-  font-size: 30px;
-  font-weight: 900;
-  color: #444444;
-}
-
+/*
+=============================
+        FOOTER
+=============================
+*/
 footer {
-  text-align: center;
+  color: #555;
   font-size: 14px;
   margin-top: 50px;
-  color: #555;
+  text-align: center;
 }
 
 footer a {
@@ -159,4 +148,150 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/*
+=============================
+        FORECAST
+=============================
+*/
+.forecast-title {
+  color: #ab94b4;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.forecast ul {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.forecast li {
+  background-color: #e8e4ec;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #ab94b4;
+  flex: 1;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.forecast li:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+}
+
+.forecast-temperature {
+  color: #444444;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+hr {
+  color: #ab94b4;
+  margin: 40px 0 20px;
+  opacity: 25%;
+}
+
+/*
+=============================
+        HEADER
+=============================
+*/
+header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.logo {
+  border-radius: 10px;
+  height: auto;
+  width: 200px;
+}
+
+/*
+=============================
+        SEARCH FORM
+=============================
+*/
+.search-form {
+  display: flex;
+  gap: 5px;
+}
+
+.search-form input[type="search"] {
+  background-color: #f8f5f7;
+  border: 1px solid #ab94b4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px #ab94b4;
+  color: #2a2a2a;
+  padding: 10px;
+}
+
+.search-form input[type="submit"] {
+  background-color: #c5a4d4;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px #ab94b4;
+  color: white;
+  cursor: pointer;
+  padding: 10px 16px;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #ab94b4;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+}
+
+/*
+=============================
+        WEATHER BOX
+=============================
+*/
+.current-weather .weather-box {
+  align-items: center;
+  background-color: #e8e4ec;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #ab94b4;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+}
+
+.temperature {
+  color: #c08087;
+  font-size: 48px;
+  margin: 5px 0 0;
+}
+
+.weather-icon {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+}
+
+.weather-left h1 {
+  color: #ab94b4;
+  font-size: 36px;
+  margin: 0;
+}
+
+.weather-right p {
+  color: #444444;
+  font-size: 16px;
+  font-weight: 5px;
+  margin: 4px 0;
+  text-align: right;
 }
