@@ -9,172 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
 
     <title>FreshStart Dev Weather App</title>
-    <style>
-      body {
-        background: #fdfdfd;
-        font-family: "Source Sans 3", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Playfair Display", serif;
-        color: #ab94b4;
-        font-size: 20px;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-      }
-
-      .logo {
-        width: 200px;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .search-form {
-        display: flex;
-        gap: 5px;
-      }
-
-      .search-form input[type="search"] {
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #ab94b4;
-        box-shadow: 0 4px 10px #ab94b4;
-        color: #2a2a2a;
-        background-color: #f8f5f7;
-      }
-
-      .search-form input[type="submit"] {
-        padding: 10px 16px;
-        background-color: #c5a4d4;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 4px 10px #ab94b4;
-      }
-      .search-form input[type="submit"]:hover {
-        background-color: #ab94b4;
-        color: #fff;
-        transition: all 200ms ease-in-out;
-      }
-
-      .date {
-        font-size: 16px;
-        margin-bottom: 10px;
-        color: #ab94b4;
-        padding: 5px;
-        font-weight: 10px;
-      }
-
-      .current-weather .weather-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #e8e4ec;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px #ab94b4;
-        flex: 1;
-        text-align: center;
-      }
-
-      .weather-left h1 {
-        margin: 0;
-        font-size: 36px;
-        color: #ab94b4;
-      }
-
-      .temperature {
-        font-size: 48px;
-        margin: 5px 0 0;
-        color: #c08087;
-      }
-
-      .weather-center {
-        font-size: 48px;
-      }
-
-      .weather-right p {
-        margin: 4px 0;
-        font-size: 16px;
-        text-align: right;
-        color: #444444;
-        font-weight: 5px;
-      }
-
-      hr {
-        margin: 40px 0 20px;
-        color: #ab94b4;
-        opacity: 25%;
-      }
-
-      .forecast-title {
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: left;
-        font-size: 14px;
-        color: #ab94b4;
-      }
-
-      .forecast ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        gap: 30px;
-        flex: 1;
-      }
-
-      .forecast li {
-        flex: 1;
-        background-color: #e8e4ec;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px #ab94b4;
-        padding: 15px;
-        text-align: center;
-        font-size: 20px;
-      }
-      .forecast li:hover {
-        transform: scale(1.03);
-        transition: all 200ms ease-in-out;
-      }
-      .forecast-temperature {
-        font-size: 30px;
-        font-weight: 900;
-        color: #444444;
-      }
-
-      footer {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 50px;
-        color: #555;
-      }
-
-      footer a {
-        color: #ab94b4;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -248,7 +85,6 @@
           </ul>
         </section>
       </main>
-
       <footer>
         <p>
           This project was coded by
@@ -267,5 +103,6 @@
         </p>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
